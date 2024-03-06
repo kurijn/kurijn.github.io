@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>profile | kurijn</title>
+
+<script type="text/turtle" id="me">
+    @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+    @prefix occo: <http://purl.obolibrary.org/obo/OCCO_17200000#>.
+    @prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+    <#> a foaf:Person, occo:engineer;
+        foaf:name "Kurijn Buys";
+        foaf:bibliography """
+            Kurijn is an engineer and inventor.
+            He has been active as a musical instrument developer.
+            Currently he works as a handyman, focussing on electro-repairs.
+            He enviseages building IT tools to serve individuals and communities in the transition to a new world.
+        """@en;
+        owl:sameAs <https://kurijn.solidcommunity.net/profile/card#me>.
+</script>
+<script type="text/turtle" id="someInfo">
+    @prefix dcterms: <http://purl.org/dc/terms/>.
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+    @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+    @prefix teach: <http://linkedscience.org/teach/ns#>.
+
+    <#> dcterms:created "2024-03-04"^^xsd:Date.
+
+    <https://users.ugent.be/~alatinis/> a foaf:Person;
+        foaf:name "Athanasios Latinis".
+
+    <https://kurijn.github.io/#me> foaf:age "40"^^xsd:integer;
+        foaf:knows (<https://en.osm.town/@pietervdvn>
+            <https://pietercolpaert.be/#me>
+            <https://users.ugent.be/~alatinis/>
+        ).
+
+    <https://pietercolpaert.be/teaching/kg/#2023-2024> a teach:Course;
+        teach:courseTitle "Knowledge Graphs"@en;
+        teach:Teacher <https://pietercolpaert.be/#me>;
+        teach:StudentGroup [
+            foaf:name "Knowledge Graph course students"@en;
+            foaf:member <https://kurijn.github.io/#me>, <https://pietercolpaert.be/#me>, <https://users.ugent.be/~alatinis/>
+        ].
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=a3803b719b600d52ced91eadb8f8c52b5a218679">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+<body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://kurijn.github.io/">kurijn</a></h1>
+      
+
+      <h1 id="profile">profile</h1>
+      Hello - my name is Kurijn.
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/kurijn/kurijn.github.io/edit/main/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
