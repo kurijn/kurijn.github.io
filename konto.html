@@ -1,0 +1,36 @@
+<script type="text/turtle">
+@prefix konto: <https://kurijn.github.io/konto/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcelements: <http://purl.org/dc/elements/1.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+### Classes ###
+
+konto:Photo rdfs:subClassOf foaf:Image;
+       rdfs:label "photo"@en;
+       rdfs:comment "A photo. A definition loyal to the ethymological meaning: there must have been photons at the basis of its generation."@en;
+       rdfs:isDefinedBy <http://kurijn.github.io/> ;
+       owl:equivalentClass <http://schema.org/Photograph>.
+
+konto:PhysicalReality a rdfs:Class;
+       rdfs:label "physical reality"@en;
+       rdfs:comment "Anything in the physical realm."@en;
+       owl:equivalentClass <http://www.europeana.eu/schemas/edm/PhysicalThing>;
+       owl:subClassOf rdfs:Resource.
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdfs:subClassOf konto:PhysicalReality.
+
+### Properties ###
+
+konto:photographedBy rdfs:subPropertyOf foaf:maker;
+       rdfs:label "photographed by"@en;
+       rdfs:domain konto:Photo;
+       rdfs:range foaf:Agent.
+
+konto:photoning rdfs:subPropertyOf foaf:depicts;
+       rdfs:label "photoning"@en;
+       rdfs:comment "A new verb: depicting, but uniquely to be used for photos!"@en;
+       rdfs:domain konto:Photo;
+       rdfs:range konto:PhysicalReality.
+</script>

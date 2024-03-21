@@ -27,6 +27,7 @@
         @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
         @prefix foaf: <http://xmlns.com/foaf/0.1/>.
         @prefix teach: <http://linkedscience.org/teach/ns#>.
+        @prefix konto: <https://kurijn.github.io/konto/>.
 
         <#> dcterms:created "2024-03-04"^^xsd:Date.
 
@@ -50,6 +51,12 @@
                 foaf:name "Knowledge Graph course students"@en;
                 foaf:member <https://kurijn.github.io/#me>, <https://lukv.github.io/#me>, <https://users.ugent.be/~alatinis/>, <https://pietervdvn.github.io/me.jsonld>
             ].
+
+        <https://photos.app.goo.gl/dtD7Btve2q9yqoa96> a konto:Photo;
+            konto:photoning <https://users.ugent.be/~alatinis/>.
+
+        <https://scontent.fbru5-1.fna.fbcdn.net/v/t1.6435-9/86970645_2734649763322833_5569999269202493440_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lFkqySvG1GQAX_VWhng&_nc_oc=Adj8zz42g9eS7wbSMzI1rPeqBf-O7iQtMXTuvwrxg9V3Tx9mo5uK1JmzqeSvzOayQSc&_nc_ht=scontent.fbru5-1.fna&oh=00_AfBKbVtLiRwyk6d11aOItDBiIqX8HTLeeSovmmN9jF_y0g&oe=6622EE27> a konto:Photo;
+            konto:photographedBy <#me>.
     </script>
 
     <link rel="stylesheet" href="/assets/css/style.css?v=a3803b719b600d52ced91eadb8f8c52b5a218679">
